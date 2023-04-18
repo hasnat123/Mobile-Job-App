@@ -26,7 +26,7 @@ const JobSearch = () => {
                 method: "GET",
                 url: `https://jsearch.p.rapidapi.com/search`,
                 headers: {
-                    "X-RapidAPI-Key": '01c95b7dcdmsh8328604ea1656b3p130c3djsn6efb9cbe415f',
+                    "X-RapidAPI-Key": 'd2ad709ad8msh638468baa6e8ff7p1fb418jsn5e42a1418091',
                     "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
                 },
                 params: {
@@ -94,7 +94,7 @@ const JobSearch = () => {
                         </View>
                         <View style={styles.loaderContainer}>
                             {searchLoader ? (
-                                <ActivityIndicator size='large' color={COLORS.primary} />
+                                <ActivityIndicator size='large' color={COLORS.tertiary} />
                             ) : searchError && (
                                 <Text>Oops something went wrong</Text>
                             )}
@@ -102,6 +102,7 @@ const JobSearch = () => {
                     </>
                 )}
                 ListFooterComponent={() => (
+                    searchResult.length > 0 &&
                     <View style={styles.footerContainer}>
                         <TouchableOpacity
                             style={styles.paginationButton}

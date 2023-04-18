@@ -83,7 +83,7 @@ const JobDetails = () => {
                 >
                     {isLoading ?
                     (
-                        <ActivityIndicator size='large' color={COLORS.primary} />
+                        <ActivityIndicator size='large' color={COLORS.tertiary} />
                     ) : error ?
                     ( <Text>Something went wrong</Text>) : data.length === 0 ?
                     ( <Text>Something went wrong</Text> ) :

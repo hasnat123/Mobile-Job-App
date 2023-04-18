@@ -24,12 +24,12 @@ const styles = StyleSheet.create({
     width: "70%",
     height: "70%",
   },
-  companyName: {
+  companyName: (selectedJob, item) => ({
     fontSize: SIZES.medium,
     fontFamily: FONT.regular,
-    color: "#B3AEC6",
+    color: selectedJob === item.job_id ? COLORS.white : '#B3AEC6',
     marginTop: SIZES.small / 1.5,
-  },
+  }),
   infoContainer: {
     marginTop: SIZES.large,
   },
@@ -49,11 +49,11 @@ const styles = StyleSheet.create({
     fontFamily: FONT.bold,
     color: selectedJob === item.job_id ? COLORS.white : COLORS.primary,
   }),
-  location: {
+  location: (selectedJob, item) => ({
     fontSize: SIZES.medium - 2,
     fontFamily: FONT.regular,
-    color: "#B3AEC6",
-  },
+    color: selectedJob === item.job_id ? COLORS.white : '#B3AEC6',
+  }),
 });
 
 export default styles;
